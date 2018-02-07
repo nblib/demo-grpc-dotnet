@@ -19,10 +19,16 @@ namespace demo_grpc_dotnet_server
         {
             Server server = new Server
             {
-                Services = { Hello.HelloSerivce.BindService(new HelloServiceImpl()) },
+                Services = { Hello.HelloSerivce.BindService(new HelloServiceImpl()),Jihe.JiheService.BindService(new JiheServiceImpl()) },
                 Ports = { new ServerPort("localhost", Port, ServerCredentials.Insecure) }
             };
-            server.Start();
+            try
+            {
+                server.Start();
+            }catch(Exception exce)
+            {
+                Console.WriteLine("error:" + exce.Message);
+            }
 
             Console.WriteLine("gRPC server listening on port " + Port);
             Console.WriteLine("任意键退出...");

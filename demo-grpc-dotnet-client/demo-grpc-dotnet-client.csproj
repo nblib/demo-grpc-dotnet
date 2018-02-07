@@ -59,6 +59,8 @@
   <ItemGroup>
     <Compile Include="grpc\hello\Hello.cs" />
     <Compile Include="grpc\hello\HelloGrpc.cs" />
+    <Compile Include="grpc\jihe\Jihe.cs" />
+    <Compile Include="grpc\jihe\JiheGrpc.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
